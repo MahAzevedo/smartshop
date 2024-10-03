@@ -5,10 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smartshop</title>
+
+    <!-- Carrega o React, React Dom e Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- o react-dom é para montar sites -->
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--esse babel serve pra transformar JS novo pra funcionar em brownsers antigos. Mas também serve pra transformar JSX em arquivo de JS. O babel que "traduz" JSX em JS pq o brownser não consegue ler em JSX, então, pra ele JSX não existe -->
 </head>
 
 <body>
+    <div id="root"></div>
 
+    <script type="text/babel">
+
+        function Button() {
+            return <button>Adicionar</button>
+        }
+
+        function App() {
+            return <div>Teste</div>;
+        }
+
+        const container = document.getElementById('root');
+        const root = ReactDom.createRoot(container);
+        root.render(<App />);
+    </script>
 </body>
 
 </html>
