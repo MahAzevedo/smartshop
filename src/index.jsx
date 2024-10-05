@@ -5,6 +5,6 @@ import App from './App.jsx';
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
   <App />
-  // </StrictMode>,
+  // </StrictMode>
 );
 // deletar o <StrictMode> pq ele resnderiza duas vezes e isso atrapalha , aqui eu só comitei
