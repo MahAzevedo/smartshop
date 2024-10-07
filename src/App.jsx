@@ -19,5 +19,3 @@ const App = () => {
 };
 
 export default App;
-
-// abrir react loaging, no localhost
