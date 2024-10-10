@@ -5,6 +5,7 @@ import Produtos from './Components/Produtos';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Contato from './Components/Contato';
+import NaoEncontrado from './Components/NaoEncontrado';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Produtos />} />
             <Route path="contato" element={<Contato />} />
+            <Route path="*" element={<NaoEncontrado />} />
           </Routes>
         </div>
         <Footer />
@@ -22,3 +24,5 @@ const App = () => {
     </div>
   );
 };
+
+export default App;
