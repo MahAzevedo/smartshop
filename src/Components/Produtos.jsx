@@ -8,6 +8,7 @@ const Produtos = () => {
       .then((r) => r.json())
       .then((json) => setProdutos(json));
   }, []);
+  if (produtos === null) return null;
   return (
     <div className={styles.produtos}>
       {produtos.map((produto) => (
