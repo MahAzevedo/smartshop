@@ -10,14 +10,14 @@ const Produtos = () => {
   }, []);
   if (produtos === null) return null;
   return (
-    <div className={styles.produtos}>
+    <section className={styles.produtos}>
       {produtos.map((produto) => (
         <div key={produto.id}>
           <h1>{produto.nome}</h1>
           <img src={produto.fotos[0].src} alt={produto.fotos[0].titulo} />
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
