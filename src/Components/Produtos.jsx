@@ -10,7 +10,12 @@ const Produtos = () => {
   }, []);
   return (
     <div className={styles.produtos}>
-      <h1>Produtos</h1>
+      {produtos.map((produto) => (
+        <div key={produto.id}>
+          <h1>{produto.nome}</h1>
+        </div>
+      ))}
+      ;
     </div>
   );
 };
