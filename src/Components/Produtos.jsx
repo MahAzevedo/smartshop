@@ -13,7 +13,7 @@ const Produtos = () => {
     <section className={styles.produtos + ' animeLeft'}>
       {produtos.map((produto) => (
         <div key={produto.id}>
-          <h1>{produto.nome}</h1>
+          <h1 className={styles.nome}>{produto.nome}</h1>
           <img src={produto.fotos[0].src} alt={produto.fotos[0].titulo} />
         </div>
       ))}
