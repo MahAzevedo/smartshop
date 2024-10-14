@@ -10,7 +10,7 @@ const Produtos = () => {
   }, []);
   if (produtos === null) return null;
   return (
-    <section className={styles.produtos}>
+    <section className={styles.produtos + ' animeLeft'}>
       {produtos.map((produto) => (
         <div key={produto.id}>
           <h1>{produto.nome}</h1>
