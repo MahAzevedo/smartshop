@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Produtos.module.css';
+import { Link } from 'react-router-dom';
 
 const Produtos = () => {
   const [produtos, setProdutos] = React.useState(null);
@@ -12,10 +13,10 @@ const Produtos = () => {
   return (
     <section className={styles.produtos + ' animeLeft'}>
       {produtos.map((produto) => (
-        <div key={produto.id}>
+        <Link key={produto.id}>
           <h1 className={styles.nome}>{produto.nome}</h1>
           <img src={produto.fotos[0].src} alt={produto.fotos[0].titulo} />
-        </div>
+        </Link>
       ))}
     </section>
   );
