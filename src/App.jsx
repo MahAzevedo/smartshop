@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Contato from './Components/Contato';
 import NaoEncontrado from './Components/NaoEncontrado';
+import Produto from './Components/Produto';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route path="/" element={<Produtos />} />
+            <Route path="produto/:id" element={<Produto />} />
             <Route path="contato" element={<Contato />} />
             <Route path="*" element={<NaoEncontrado />} />
           </Routes>
