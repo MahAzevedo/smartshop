@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Produto.module.css';
 import { useParams } from 'react-router-dom';
+import Head from './Head';
 
 const Produto = () => {
   const [produto, setProduto] = React.useState(null);
@@ -28,7 +29,11 @@ const Produto = () => {
   if (error) return <p>{error}</p>;
   if (produto === null) return null;
   return (
-    <section className={styles.produto}>
+    <section className={styles.produto + ' animeLeft'}>
+      <Head
+        title={`Ranek | ${produto.nome}`}
+        description={`Ranek | Esse é um produto: ${produto.nome}`}
+      />
       {produto.fotos.map((foto) => (
         <img key={foto.src} src={foto.src} alt={foto.titulo} />
       ))}
