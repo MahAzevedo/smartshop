@@ -16,7 +16,7 @@ const Produto = () => {
         const response = await fetch(url);
         const json = await response.json();
         setProduto(json);
-      } catch (error) {
+      } catch (erro) {
         setError('Um erro ocorreu');
       } finally {
         setLoading(false);
@@ -30,13 +30,10 @@ const Produto = () => {
   if (produto === null) return null;
   return (
     <section className={styles.produto + ' animeLeft'}>
-      <Head
-        title={`Ranek | ${produto.nome}`}
-        description={`Ranek | Esse é um produto: ${produto.nome}`}
-      />
-      {produto.fotos.map((foto) => (
+       <Head titulo={`Ranek | ${produto.nome}`} description={`Ranek | Esse é um produto ${produto.nome}`} />
+      {produto.fotos.map(foto => 
         <img key={foto.src} src={foto.src} alt={foto.titulo} />
-      ))}
+      )}
       <div>
         <h1>{produto.nome}</h1>
         <span className={styles.preco}>R$ {produto.preco}</span>
