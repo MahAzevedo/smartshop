@@ -32,11 +32,13 @@ const Produto = () => {
     <section className={styles.produto + ' animeLeft'}>
        <Head 
        title={`Ranek | ${produto.nome}`} 
-       description={`Ranek | Esse é um produto ${produto.nome}`} 
+       description={`Ranek | Esse é um produto ${produto.nome}`}
        />
-      {produto.fotos.map(foto => 
+       <div>
+         {produto.fotos.map(foto => 
         <img key={foto.src} src={foto.src} alt={foto.titulo} />
       )}
+       </div>
       <div>
         <h1>{produto.nome}</h1>
         <span className={styles.preco}>R$ {produto.preco}</span>
